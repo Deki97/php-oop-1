@@ -41,6 +41,8 @@ metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
         }
     }
 
+
+    // Istanza SpiderMan: No Way Home 
     $spidermanNoWayHome = new Movie('Spiderman: No Way Home', 'Action', '2h 28min');
     $spidermanNoWayHome->name = 'Spiderman: No Way Home';
     $spidermanNoWayHome->genre = 'Action';
@@ -50,6 +52,15 @@ metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
     $spidermanNoWayHome->original_language = 'en';
     // var_dump($spidermanNoWayHome);
 
+
+    // Istanza Red Notice
+    $redNotice = new Movie('Red Notice', 'Action', '1h 57min');
+    $redNotice->name = 'Red Notice';
+    $redNotice->genre = 'Action';
+    $redNotice->year = '2021';
+    $redNotice->duration = '1h 57min';
+    $redNotice->description = 'An Interpol-issued Red Notice is a global alert to hunt and capture the world\'s most wanted. But when a daring heist brings together the FBI\'s top profiler and two rival criminals, there\'s no telling what will happen.';
+    $redNotice->original_language = 'en';
 
 ?>
 
@@ -72,6 +83,15 @@ metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
                     <li>Genre and Duration: <?php echo $spidermanNoWayHome->getGenreAndDuration(); ?></li>
                     <li>Description: <?php echo $spidermanNoWayHome->description; ?></li>
                     <li>Original language: <?php echo $spidermanNoWayHome->original_language; ?></li>
+                </ul>
+            </div>
+
+            <div class="single-movie">
+                <ul>
+                    <li>Name and Year: <?php echo $redNotice->getNameAndYear(); ?></li>
+                    <li>Genre and Duration: <?php echo $redNotice->getGenreAndDuration(); ?></li>
+                    <li>Description: <?php echo $redNotice->description; ?></li>
+                    <li>Original language: <?php echo $redNotice->original_language; ?></li>
                 </ul>
             </div>
         </div>
