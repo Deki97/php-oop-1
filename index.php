@@ -31,14 +31,50 @@ metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
 
         // Metodo che ritorna nome e anno di uscita del film
         public function getNameAndYear() {
-            return $this->name . ' ' . $this->year;
+            return $this->name . ', ' . $this->year;
         }
 
 
         // Metodo che ritorna genere e durata del film
         public function getGenreAndDuration() {
-            return $this->genre . ' ' . $this->duration;
+            return $this->genre . ', ' . $this->duration;
         }
     }
 
+    $spidermanNoWayHome = new Movie('Spiderman: No Way Home', 'Action', '2h 28min');
+    $spidermanNoWayHome->name = 'Spiderman: No Way Home';
+    $spidermanNoWayHome->genre = 'Action';
+    $spidermanNoWayHome->year = '2021';
+    $spidermanNoWayHome->duration = '2h 28min';
+    $spidermanNoWayHome->description = 'Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.';
+    $spidermanNoWayHome->original_language = 'en';
+    // var_dump($spidermanNoWayHome);
+
+
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Movies List OOP</title>
+</head>
+<body>
+    <div class="container">
+        <div class="movie-list">
+        <h1>Lista dei film</h1>
+            <div class="single-movie">
+                <ul>
+                    <li>Name and Year: <?php echo $spidermanNoWayHome->getNameAndYear(); ?></li>
+                    <li>Genre and Duration: <?php echo $spidermanNoWayHome->getGenreAndDuration(); ?></li>
+                    <li>Description: <?php echo $spidermanNoWayHome->description; ?></li>
+                    <li>Original language: <?php echo $spidermanNoWayHome->original_language; ?></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
