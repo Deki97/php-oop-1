@@ -62,6 +62,26 @@ metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
     $redNotice->description = 'An Interpol-issued Red Notice is a global alert to hunt and capture the world\'s most wanted. But when a daring heist brings together the FBI\'s top profiler and two rival criminals, there\'s no telling what will happen.';
     $redNotice->original_language = 'en';
 
+
+    // Istanza Avengers: Endgame
+    $avengers = new Movie('Avengers: Endgame', 'Adventure', '3h 1min');
+    $avengers->name = 'Avengers: Endgame';
+    $avengers->genre = 'Adventure';
+    $avengers->year = '2019';
+    $avengers->duration = '3h 1min';
+    $avengers->description = 'After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos\' actions and restore order to the universe once and for all, no matter what consequences may be in store.';
+    $avengers->original_language = 'en';
+
+
+    // Istanza La vita e' bella
+    $laVitaEBella = new Movie('La vita è bella', 'Comedy', '1h 56min');
+    $laVitaEBella->name = 'La vita è bella';
+    $laVitaEBella->genre = 'Comedy';
+    $laVitaEBella->year = '1997';
+    $laVitaEBella->duration = '1h 56min';
+    $laVitaEBella->description = 'A touching story of an Italian book seller of Jewish ancestry who lives in his own little fairy tale. His creative and happy life would come to an abrupt halt when his entire family is deported to a concentration camp during World War II. While locked up he tries to convince his son that the whole thing is just a game.';
+    $laVitaEBella->original_language = 'it';
+
 ?>
 
 <!DOCTYPE html>
@@ -92,6 +112,24 @@ metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
                     <li>Genre and Duration: <?php echo $redNotice->getGenreAndDuration(); ?></li>
                     <li>Description: <?php echo $redNotice->description; ?></li>
                     <li>Original language: <?php echo $redNotice->original_language; ?></li>
+                </ul>
+            </div>
+
+            <div class="single-movie">
+                <ul>
+                    <li>Name and Year: <?php echo $avengers->getNameAndYear(); ?></li>
+                    <li>Genre and Duration: <?php echo $avengers->getGenreAndDuration(); ?></li>
+                    <li>Description: <?php echo $avengers->description; ?></li>
+                    <li>Original language: <?php echo $avengers->original_language; ?></li>
+                </ul>
+            </div>
+
+            <div class="single-movie">
+                <ul>
+                    <li>Name and Year: <?php echo $laVitaEBella->getNameAndYear(); ?></li>
+                    <li>Genre and Duration: <?php echo $laVitaEBella->getGenreAndDuration(); ?></li>
+                    <li>Description: <?php echo $laVitaEBella->description; ?></li>
+                    <li>Original language: <?php echo $laVitaEBella->original_language; ?></li>
                 </ul>
             </div>
         </div>
